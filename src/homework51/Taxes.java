@@ -8,8 +8,24 @@ public class Taxes {
         System.out.println("Input your salary:");
 
         int salary = scanner.nextInt();
-        double percent = 2.5;
-        double result = salary * percent / 100;
 
+        double lowPercent = 2.5;
+        double midPercent = 4.3;
+        double highPercent = 6.7;
+
+        double lowTax = salary * lowPercent / 100;
+        double midTax = salary * midPercent / 100;
+        double highTax = salary * highPercent / 100;
+
+        if (salary > 0 & salary <=10000) {
+            System.out.println("Your tax is: " + lowTax);
+        } else if (salary > 10000 & salary <= 25000) {
+            System.out.println("Your tax is: " + midTax);
+        } else if (salary > 25000) {
+            System.out.println("Your tax is: " + highTax);
+        } else {
+            System.out.println("Not calculated!");
+        }
+        scanner.close();
     }
 }
