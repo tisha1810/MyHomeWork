@@ -12,7 +12,7 @@ public class Taxes {
         double tax = salary * percent / 100;
 
 
-        if (salary > 0 && salary <=10000) {
+        if (salary > 0 && salary <= 10000) {
             System.out.println("Your tax is: " + tax);
         } else if (salary > 10000 && salary <= 25000) {
             percent = 4.3;
