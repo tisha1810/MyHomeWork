@@ -8,28 +8,21 @@ public class Taxes {
         System.out.println("Input your salary:");
 
         int salary = scanner.nextInt();
-
         double percent = 2.5;
         double tax = salary * percent / 100;
 
 
         if (salary > 0 && salary <=10000) {
             System.out.println("Your tax is: " + tax);
-        }
-
-        percent = 4.3;
-        tax = salary * percent / 100;
-
-        if (salary > 10000 && salary <= 25000) {
+        } else if (salary > 10000 && salary <= 25000) {
+            percent = 4.3;
+            tax = salary * percent / 100;
             System.out.println("Your tax is: " + tax);
-        }
-
-        percent = 6.7;
-        tax = salary * percent / 100;
-
-        if (salary > 25000) {
-            System.out.println("Your tax is: " + tax);
-        } else if (salary <= 0){
+        } else if (salary > 25000) {
+            percent = 6.7;
+            tax = salary * percent / 100;
+            System.out.println("Yor tax is: " + tax);
+        } else {
             System.out.println("Not calculated!");
         }
         scanner.close();
