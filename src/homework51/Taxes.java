@@ -8,11 +8,12 @@ public class Taxes {
         System.out.println("Input your salary:");
 
         int salary = scanner.nextInt();
-        double percent = 2.5;
-        double tax = salary * percent / 100;
-
+        double percent;
+        double tax;
 
         if (salary > 0 && salary <= 10000) {
+            percent = 2.5;
+            tax = salary * percent / 100;
             System.out.println("Your tax is: " + tax);
         } else if (salary > 10000 && salary <= 25000) {
             percent = 4.3;
