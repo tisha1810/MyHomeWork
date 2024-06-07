@@ -43,7 +43,7 @@ public class Arrays {
                 counter = i;
             }
         }
-        System.out.println("Minimal number is: " + minMax + " index is " + counter);
+        System.out.println("Minimal number is: " + minMax + " (index is " + counter + ")");
         System.out.println("----- Five task ----");
 
         minMax = 0;
@@ -54,8 +54,17 @@ public class Arrays {
                 counter = i;
             }
         }
-        System.out.println("Maximal number is: " + minMax + " index is " + counter);
+        System.out.println("Maximal number is: " + minMax + " (index is " + counter + ")");
         System.out.println("----- Sixth task ----");
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                sum += numbers[i];
+                result = (double) sum / i;
+            }
+        }
+        System.out.printf("Avarage sum is %.2f \n", result);
+        System.out.println("----- The End -----");
     }
 }
 
