@@ -66,10 +66,10 @@ public class Arrays {
                 break;
             }
         }
-        for (int i = counter; i < numbers.length; i++) {
+        for (int i = counter + 1; i < numbers.length; i++) {
             sum += numbers[i];
         }
-        result = (double) sum / (numbers.length - counter);
+        result = (double) sum / (numbers.length - (counter + 1));
         System.out.printf("Avarage sum is %.2f \n", result);
         System.out.println("----- The End -----");
     }
