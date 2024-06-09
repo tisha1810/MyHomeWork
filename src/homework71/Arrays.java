@@ -19,10 +19,12 @@ public class Arrays {
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] < 0) {
                 sum += numbers[i];
+
             }
         }
-        System.out.println("Sum of even numbers is: " + sum);
+        System.out.println("Sum of negativ numbers is: " + sum);
         System.out.println("----- Second task ----");
+
 
         int counter = 0;
         for (int i = 0; i < numbers.length; i++) {
@@ -30,12 +32,12 @@ public class Arrays {
                 counter++;
             }
         }
-        System.out.println("Number of odd numbers is: " + counter);
+        System.out.println("Number of even numbers is: " + counter);
         System.out.println("----- Third task ----");
 
         sum = numbers.length - counter;
 
-        System.out.println("Number of unpaired numbers is: " + sum);
+        System.out.println("Number of odd numbers is: " + sum);
         System.out.println("----- Four task ----");
 
         int min = 0;
@@ -79,10 +81,14 @@ public class Arrays {
     }
 
     public static void printArray(int[] array) {
+
+        System.out.println("----Random array-----");
+        System.out.print("[ ");
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+            System.out.print(array[i]+" ");
 
         }
+        System.out.print("]");
         System.out.println();
 
 
