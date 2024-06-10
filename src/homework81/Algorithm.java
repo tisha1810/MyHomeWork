@@ -23,12 +23,14 @@ public class Algorithm {
         Scanner scanner = new Scanner(System.in);
         int searchNumber = scanner.nextInt();
 
-        int search = binarySearch(numbers, searchNumber);
+        int index = binarySearch(numbers, searchNumber);
 
+        if (index >= 0) {
+            System.out.println("Index of your number is: " + index);
+        } else {
+            System.out.println("Incorrect data!");
 
-        System.out.println("Index of your number is: " + search);
-
-
+        }
     }
 
     public static void printArray(int[] array) {
