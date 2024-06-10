@@ -23,10 +23,10 @@ public class Algorithm {
         Scanner scanner = new Scanner(System.in);
         int searchNumber = scanner.nextInt();
 
-        int search = binarySearch(numbers,searchNumber);
+        int search = binarySearch(numbers, searchNumber);
 
 
-        System.out.println(searchNumber + " index of your number is: " + search);
+        System.out.println("Index of your number is: " + search);
 
 
     }
@@ -61,6 +61,7 @@ public class Algorithm {
 
 
     }
+
     public static int binarySearch(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
