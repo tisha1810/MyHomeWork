@@ -7,15 +7,13 @@ public class Algorithm {
     public static void main(String[] args) {
 
         int[] numbers = new int[15];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = ThreadLocalRandom.current().nextInt(100);
 
-        }
         System.out.println("----Usorted array----");
+        generateArray(numbers);
         printArray(numbers);
 
         System.out.println("-----Sorted array-----");
-        bubbleSort(numbers);
+        insertionSort(numbers);
         printArray(numbers);
 
         System.out.println("Input your number: ");
@@ -43,22 +41,17 @@ public class Algorithm {
 
     }
 
-    public static void bubbleSort(int[] array) {
-        int temp = 0;
-        boolean sort = false;
-
-        while (!sort) {
-            sort = true;
-            for (int i = 0; i < array.length - 1; i++) {
-                if (array[i] > array[i + 1]) {
-                    temp = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = temp;
-                    sort = false;
-
-                }
-
+    public static void insertionSort(int[] array) {
+        int n = array.length;
+        for (int i = 1; i < n; i++) {
+            int temp = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > temp) {
+                array[j + 1] = array[j];
+                j--;
             }
+            array[j + 1] = temp;
+
         }
 
 
@@ -78,6 +71,12 @@ public class Algorithm {
             }
         }
         return -1;
+    }
+    public static void generateArray(int[]array){
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ThreadLocalRandom.current().nextInt(100);
+
+        }
     }
 
 }
