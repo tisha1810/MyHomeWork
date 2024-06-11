@@ -27,7 +27,6 @@ public class Algorithm {
             System.out.println("Index of your number is: " + index);
         } else {
             System.out.println("Incorrect data!");
-
         }
     }
 
@@ -38,7 +37,6 @@ public class Algorithm {
             System.out.print(array[i] + " ");
         }
         System.out.println("]");
-
     }
 
     public static void insertionSort(int[] array) {
@@ -51,10 +49,7 @@ public class Algorithm {
                 j--;
             }
             array[j + 1] = temp;
-
         }
-
-
     }
 
     public static int binarySearch(int[] arr, int target) {
@@ -72,12 +67,11 @@ public class Algorithm {
         }
         return -1;
     }
-    public static void generateArray(int[]array){
+
+    public static void generateArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = ThreadLocalRandom.current().nextInt(100);
-
         }
     }
-
 }
 
