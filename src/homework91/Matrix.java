@@ -1,11 +1,15 @@
 package homework91;
 
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Matrix {
     public static void main(String[] args) {
+        Scanner scanner= new Scanner(System.in);
 
-        int maxSize = ThreadLocalRandom.current().nextInt(5);
+        System.out.println("Enter the desired matrix size: ");
+
+        int maxSize = scanner.nextInt();
         int[][] matrix = new int[maxSize][maxSize];
 
         System.out.println("---Random MATRIX---");
@@ -36,7 +40,7 @@ public class Matrix {
     public static void generateMatrix(int[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
-                array[i][j] = ThreadLocalRandom.current().nextInt(50);
+                array[i][j] = ThreadLocalRandom.current().nextInt(1,50);
             }
         }
     }
@@ -93,7 +97,6 @@ public class Matrix {
     public static int magicSquare(int[][] array) {
         int inchSum = 0;
         int rowSum = 0;
-        int columnSum = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
                 if (i == j) {
@@ -106,6 +109,7 @@ public class Matrix {
                 rowSum += array[i][j];
             }
         }
+        int columnSum = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j == 0; j++) {
                 columnSum += array[i][j];
