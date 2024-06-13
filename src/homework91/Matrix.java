@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Matrix {
     public static void main(String[] args) {
 
-        int maxSize = ThreadLocalRandom.current().nextInt(1, 5);
+        int maxSize = ThreadLocalRandom.current().nextInt(5);
         int[][] matrix = new int[maxSize][maxSize];
 
         System.out.println("---Random MATRIX---");

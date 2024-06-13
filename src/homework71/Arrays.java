@@ -6,32 +6,18 @@ public class Arrays {
     public static void main(String[] args) {
         int[] numbers = new int[20];
 
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = ThreadLocalRandom.current().nextInt(-100, 100);
-
-        }
+        generateArray(numbers);
         printArray(numbers);
-
-
-        int sum = 0;
         System.out.println("----- First task -----");
 
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < 0) {
-                sum += numbers[i];
+        int sum = sumNegativNumbers(numbers);
 
-            }
-        }
         System.out.println("Sum of negativ numbers is: " + sum);
         System.out.println("----- Second task ----");
 
 
-        int counter = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] % 2 == 0) {
-                counter++;
-            }
-        }
+        int counter = evenNumber(numbers);
+
         System.out.println("Number of even numbers is: " + counter);
         System.out.println("----- Third task ----");
 
@@ -83,7 +69,7 @@ public class Arrays {
     public static void printArray(int[] array) {
 
         System.out.println("----Random array-----");
-        System.out.print("[ ");
+        System.out.print("[");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
 
@@ -93,6 +79,33 @@ public class Arrays {
 
 
     }
+
+    public static void generateArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ThreadLocalRandom.current().nextInt(-100, 100);
+        }
+    }
+
+    public static int sumNegativNumbers(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                sum += array[i];
+            }
+        }
+        return sum;
+    }
+
+    public static int evenNumber(int[] array) {
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
 
 
