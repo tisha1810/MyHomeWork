@@ -56,7 +56,7 @@ public class Matrix {
 
     public static int sumMatrixEven(int[][] array) {
         int sum = 0;
-        for (int i = 1; i < array.length; i += 2) {
+        for (int i = 0; i < array.length; i += 2) {
             for (int j = 0; j < array.length; j++) {
                 sum += array[i][j];
             }
@@ -66,7 +66,7 @@ public class Matrix {
 
     public static int sumMatrixObb(int[][] array) {
         int sum = 0;
-        for (int i = 0; i < array.length; i += 2) {
+        for (int i = 1; i < array.length; i += 2) {
             for (int j = 0; j < array.length; j++) {
                 sum += array[i][j];
             }
@@ -77,7 +77,7 @@ public class Matrix {
     public static long productEvenColumns(int[][] array) {
         long product = 1;
         for (int i = 0; i < array.length; i++) {
-            for (int j = 1; j < array.length; j += 2) {
+            for (int j = 0; j < array.length; j += 2) {
                 product *= array[i][j];
             }
         }
@@ -87,7 +87,7 @@ public class Matrix {
     public static long productObbColumns(int[][] array) {
         long product = 1;
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j += 2) {
+            for (int j = 1; j < array.length; j += 2) {
                 product *= array[i][j];
             }
         }
