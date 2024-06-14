@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Algorithm {
     public static void main(String[] args) {
 
-        int[] numbers = new int[15];
+        int[] numbers = new int[10];
 
         System.out.println("----Usorted array----");
         generateArray(numbers);
@@ -26,7 +26,7 @@ public class Algorithm {
         if (index >= 0) {
             System.out.println("Index of your number is: " + index);
         } else {
-            System.out.println("Incorrect data!");
+            System.out.println("Incorrect element!");
         }
     }
 
