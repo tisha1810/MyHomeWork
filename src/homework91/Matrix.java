@@ -11,24 +11,24 @@ public class Matrix {
         if (maxSize < 2) {
             System.out.println("Can't build the matrix!");
         } else {
-            int[][] matrix = generateMatrix(maxSize);
+            generateMatrix(maxSize);
 
             System.out.println("---Random MATRIX---");
-            printMatrix(matrix);
+            printMatrix(generateMatrix(maxSize));
 
             int initialRow = 0;
-            System.out.println("Sum of even rows " + sumRows(matrix, initialRow));
+            System.out.println("Sum of even rows " + sumRows(generateMatrix(maxSize), initialRow));
 
             initialRow = 1;
-            System.out.println("Sum of odd rows " + sumRows(matrix, initialRow));
+            System.out.println("Sum of odd rows " + sumRows(generateMatrix(maxSize), initialRow));
 
             initialRow = 0;
-            System.out.println("Product of even columns " + productColumns(matrix, initialRow));
+            System.out.println("Product of even columns " + productColumns(generateMatrix(maxSize), initialRow));
 
             initialRow = 1;
-            System.out.println("Product of odd columns " + productColumns(matrix, initialRow));
+            System.out.println("Product of odd columns " + productColumns(generateMatrix(maxSize), initialRow));
 
-            boolean magicSquare = magicSquare(matrix, initialRow);
+            boolean magicSquare = magicSquare(generateMatrix(maxSize), initialRow);
             if (magicSquare == true) {
                 System.out.println("Bingo! Magic square");
             } else {
