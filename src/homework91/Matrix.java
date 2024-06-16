@@ -8,24 +8,34 @@ public class Matrix {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the desired matrix size: ");
         int maxSize = scanner.nextInt();
+        if (maxSize < 2) {
+            System.out.println("Can't build the matrix!");
+        } else {
+            int[][] matrix = generateMatrix(maxSize);
 
-        int[][] matrix = generateMatrix(maxSize);
+            System.out.println("---Random MATRIX---");
+            printMatrix(matrix);
 
-        System.out.println("---Random MATRIX---");
-        printMatrix(matrix);
+            int initialRow = 0;
+            System.out.println("Sum of even rows " + sumRows(matrix, initialRow));
 
-        int initialRow = 0;
-        System.out.println("Sum of even rows " + sumRows(matrix, initialRow));
+            initialRow = 1;
+            System.out.println("Sum of odd rows " + sumRows(matrix, initialRow));
 
-        initialRow = 1;
-        System.out.println("Sum of odd rows " + sumRows(matrix, initialRow));
+            initialRow = 0;
+            System.out.println("Product of even columns " + productColumns(matrix, initialRow));
 
-        initialRow = 0;
-        System.out.println("Product of even columns " + productColumns(matrix, initialRow));
+            initialRow = 1;
+            System.out.println("Product of odd columns " + productColumns(matrix, initialRow));
 
-        initialRow = 1;
-        System.out.println("Product of odd columns " + productColumns(matrix, initialRow));
+            boolean magicSquare = magicSquare(matrix, initialRow);
+            if (magicSquare == true) {
+                System.out.println("Bingo! Magic square");
+            } else {
+                System.out.println("It's not magic square");
 
+            }
+        }
     }
 
     public static int[][] generateMatrix(int maxSize) {
@@ -65,5 +75,21 @@ public class Matrix {
             }
         }
         return product;
+    }
+
+    public static boolean magicSquare(int[][] array, int initialRow) {
+        int columnSum = 0;
+        for (int i = 0; i < array.length; i++) {
+            columnSum += array[i][initialRow];
+        }
+        int rowSum = 0;
+        for (int j = 0; j < array.length; j++) {
+            rowSum += array[initialRow][j];
+
+        }
+        if (columnSum == rowSum) {
+            return true;
+        }
+        return false;
     }
 }
