@@ -8,44 +8,39 @@ public class Matrix {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the desired matrix size: ");
         int maxSize = scanner.nextInt();
+        int[][] matrix = generateMatrix(maxSize);
+
         if (maxSize < 2) {
             System.out.println("Can't build the matrix!");
         } else {
-            generateMatrix(maxSize);
-
             System.out.println("---Random MATRIX---");
-            printMatrix(generateMatrix(maxSize));
+
+            printMatrix(matrix);
 
             int initialRow = 0;
-            System.out.println("Sum of even rows " + sumRows(generateMatrix(maxSize), initialRow));
+            System.out.println("Sum of even rows " + sumRows(matrix, initialRow));
 
             initialRow = 1;
-            System.out.println("Sum of odd rows " + sumRows(generateMatrix(maxSize), initialRow));
+            System.out.println("Sum of odd rows " + sumRows(matrix, initialRow));
 
             initialRow = 0;
-            System.out.println("Product of even columns " + productColumns(generateMatrix(maxSize), initialRow));
+            System.out.println("Product of even columns " + productColumns(matrix, initialRow));
 
             initialRow = 1;
-            System.out.println("Product of odd columns " + productColumns(generateMatrix(maxSize), initialRow));
+            System.out.println("Product of odd columns " + productColumns(matrix, initialRow));
 
-            boolean magicSquare = magicSquare(generateMatrix(maxSize), initialRow);
-            if (magicSquare == true) {
-                System.out.println("Bingo! Magic square");
-            } else {
-                System.out.println("It's not magic square");
 
-            }
         }
     }
 
     public static int[][] generateMatrix(int maxSize) {
-        int[][] array = new int[maxSize][maxSize];
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                array[i][j] = ThreadLocalRandom.current().nextInt(1, 50);
+        int[][] matrix = new int[maxSize][maxSize];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                matrix[i][j] = ThreadLocalRandom.current().nextInt(1, 50);
             }
         }
-        return array;
+        return matrix;
     }
 
     public static void printMatrix(int[][] array) {
