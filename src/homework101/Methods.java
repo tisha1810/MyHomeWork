@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Methods {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input your value:");
+        System.out.println("Enter your value:");
 
         int value = scanner.nextInt();
         System.out.println("Square of your value: " + valueSquare(value));
@@ -38,7 +38,7 @@ public class Methods {
         System.out.println("Input number of print lines:");
         int n = scanner.nextInt();
         printLines(string, n);
-
+        System.out.println("--The End!--");
 
     }
 
