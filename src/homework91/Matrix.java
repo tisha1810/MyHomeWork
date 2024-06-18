@@ -28,8 +28,6 @@ public class Matrix {
 
             initialRow = 1;
             System.out.println("Product of odd columns " + productColumns(matrix, initialRow));
-
-
         }
     }
 
