@@ -28,8 +28,8 @@ public class Methods {
         Scanner scannerLine = new Scanner(System.in);
 
         System.out.println("Enter line to Revers:");
-        String string = scannerLine.nextLine();
-        System.out.println("Reverse string: " + reverse(string));
+        String line = scannerLine.nextLine();
+        System.out.println("Reverse string: " + reverse(line));
 
         System.out.println("Input value a:");
         int a = scanner.nextInt();
@@ -38,7 +38,7 @@ public class Methods {
         System.out.println("Power of values: " + degreeOfValues(a, b));
 
         System.out.println("Enter line to print:");
-        String line = scannerLine.nextLine();
+        line = scannerLine.nextLine();
         System.out.println("Input number of print lines:");
         int n = scanner.nextInt();
         printLines(line, n);
@@ -81,8 +81,8 @@ public class Methods {
         return sum;
     }
 
-    public static String reverse(String string) {
-        StringBuilder reverseLine = new StringBuilder(string);
+    public static String reverse(String line) {
+        StringBuilder reverseLine = new StringBuilder(line);
         return reverseLine.reverse().toString();
     }
 
