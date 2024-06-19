@@ -25,8 +25,10 @@ public class Methods {
 
         System.out.println("Sum of your array: " + arraySum(array));
 
-        String string = "Hello World!";
-        System.out.println("Your string: " + string);
+        Scanner scannerLine = new Scanner(System.in);
+
+        System.out.println("Enter line to Revers:");
+        String string = scannerLine.nextLine();
         System.out.println("Reverse string: " + reverse(string));
 
         System.out.println("Input value a:");
@@ -35,9 +37,12 @@ public class Methods {
         int b = scanner.nextInt();
         System.out.println("Power of values: " + degreeOfValues(a, b));
 
+        System.out.println("Enter line to print:");
+        String line = scannerLine.nextLine();
         System.out.println("Input number of print lines:");
         int n = scanner.nextInt();
-        printLines(string, n);
+        printLines(line, n);
+        System.out.println();
         System.out.println("--The End!--");
 
     }
@@ -88,9 +93,9 @@ public class Methods {
         return result;
     }
 
-    public static void printLines(String string, int n) {
+    public static void printLines(String line, int n) {
         for (int i = 1; i <= n; i++) {
-            System.out.println(string);
+            System.out.println(line);
 
         }
     }
