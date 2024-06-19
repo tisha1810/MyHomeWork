@@ -6,37 +6,42 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Methods {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your value:");
 
+        System.out.println("Enter your value:");
         int value = scanner.nextInt();
         System.out.println("Square of your value: " + valueSquare(value));
 
+        System.out.println();
         System.out.println("Input your radius:");
         double radius = scanner.nextDouble();
         System.out.println("Input your high: ");
         double high = scanner.nextDouble();
         System.out.println("Volume of your cylinder: " + volume(radius, high) + " liters");
 
+        System.out.println();
         System.out.println("Input array size: ");
         value = scanner.nextInt();
 
+        System.out.println();
         int[] array = generateArray(value);
         printArray(array);
-
         System.out.println("Sum of your array: " + arraySum(array));
 
         Scanner scannerLine = new Scanner(System.in);
 
+        System.out.println();
         System.out.println("Enter line to Revers:");
         String line = scannerLine.nextLine();
         System.out.println("Reverse string: " + reverse(line));
 
+        System.out.println();
         System.out.println("Input value a:");
         int a = scanner.nextInt();
         System.out.println("Input value b:");
         int b = scanner.nextInt();
         System.out.println("Power of values: " + degreeOfValues(a, b));
 
+        System.out.println();
         System.out.println("Enter line to print:");
         line = scannerLine.nextLine();
         System.out.println("Input number of print lines:");
