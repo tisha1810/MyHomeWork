@@ -13,7 +13,7 @@ public class ClassesAndObjects {
         System.out.println("---- 2 nd ----");
 
         Person fourPerson = new Person("Tom", 65, "actor");
-        Person fivePer = new Person("Tom",65);
+        Person fivePerson = new Person("Tom", 65);
 
 
     }
