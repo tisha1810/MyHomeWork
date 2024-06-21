@@ -11,11 +11,8 @@ public class ClassesAndObjects {
         Person thirdPerson = new Person("Matt", 55, "policeman");
 
         System.out.println("---- 2 nd ----");
-
-        Person fourPerson = new Person("Tom", 65, "actor");
-        Person fivePerson = new Person("Tom", 65);
-
-
+        Person fourPerson = new Person("Tom", 53, "teacher");
+        Person changeProfession = new Person("Tom", 53);
     }
 }
 
@@ -23,7 +20,6 @@ class Person {
     String name;
     int age;
     String profession;
-    String newProfession;
 
     public Person(String name, int age, String profession) {
         this.name = name;
