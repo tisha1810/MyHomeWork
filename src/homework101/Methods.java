@@ -20,7 +20,7 @@ public class Methods {
 
         System.out.println();
         System.out.println("Input array size: ");
-        value = scanner.nextInt();
+        int size = scanner.nextInt();
 
         System.out.println();
         int[] array = generateArray(value);
@@ -35,11 +35,11 @@ public class Methods {
         System.out.println("Reverse string: " + reverse(line));
 
         System.out.println();
-        System.out.println("Input value a:");
-        int a = scanner.nextInt();
-        System.out.println("Input value b:");
-        int b = scanner.nextInt();
-        System.out.println("Power of values: " + degreeOfValues(a, b));
+        System.out.println("Input base:");
+        int base = scanner.nextInt();
+        System.out.println("Input power:");
+        int power = scanner.nextInt();
+        System.out.println("Power of values: " + degreeOfValues(base, power));
 
         System.out.println();
         System.out.println("Enter line to print:");
@@ -62,8 +62,8 @@ public class Methods {
         return volume;
     }
 
-    public static int[] generateArray(int value) {
-        int[] array = new int[value];
+    public static int[] generateArray(int size) {
+        int[] array = new int[size];
         for (int i = 0; i < array.length; i++) {
             array[i] = ThreadLocalRandom.current().nextInt(1, 50);
         }
@@ -97,7 +97,7 @@ public class Methods {
     }
 
     public static void printLines(String line, int n) {
-        for (int i = 1; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             System.out.println(line);
 
         }

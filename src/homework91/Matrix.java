@@ -70,19 +70,14 @@ public class Matrix {
         return product;
     }
 
-    public static boolean magicSquare(int[][] array, int initialRow) {
-        int columnSum = 0;
+    public static boolean magicSquare(int[][] array) {
+        int inchSum = 0;
         for (int i = 0; i < array.length; i++) {
-            columnSum += array[i][initialRow];
-        }
-        int rowSum = 0;
-        for (int j = 0; j < array.length; j++) {
-            rowSum += array[initialRow][j];
+            inchSum += array[i][i];
 
         }
-        if (columnSum == rowSum) {
-            return true;
-        }
+
         return false;
+
     }
 }
