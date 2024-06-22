@@ -17,6 +17,7 @@ public class Person {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your new profession:");
         String newProfession = scanner.nextLine();
+        System.out.println("- After update profession -");
         return newProfession;
     }
 }
