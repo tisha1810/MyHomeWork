@@ -5,19 +5,19 @@ public class PersonData {
         System.out.println("----- 1st -----");
 
         Person firstPerson = new Person("Matt", 37, "lawyer");
-        Person.printPersonData(firstPerson.name, firstPerson.age, firstPerson.profession);
+        firstPerson.printPersonData();
 
         Person secondPerson = new Person("Allison", 32, "doctor");
-        Person.printPersonData(secondPerson.name, secondPerson.age, secondPerson.profession);
+        secondPerson.printPersonData();
 
         Person thirdPerson = new Person("Michael", 45, "policeman");
-        Person.printPersonData(thirdPerson.name, thirdPerson.age, thirdPerson.profession);
+        thirdPerson.printPersonData();
 
         System.out.println("----- 2nd -----");
 
         Person fourPerson = new Person("Emma", 29, "journalist");
-        Person.printPersonData(fourPerson.name, fourPerson.age, fourPerson.profession);
-        Person.printPersonData(fourPerson.name, fourPerson.age, Person.changeProfession());
+        fourPerson.printPersonData();
+        fourPerson.printUpdateData();
 
     }
 }
