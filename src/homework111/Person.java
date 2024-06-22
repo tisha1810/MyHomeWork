@@ -13,6 +13,10 @@ public class Person {
         this.profession = profession;
     }
 
+    public static void printPersonData(String name, int age, String profession) {
+        System.out.printf("Name: %s, age %d work: %s \n", name, age, profession);
+    }
+
     public static String changeProfession() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your new profession:");
@@ -20,4 +24,5 @@ public class Person {
         System.out.println("- After update profession -");
         return newProfession;
     }
+
 }
