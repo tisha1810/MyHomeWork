@@ -17,6 +17,8 @@ public class PersonData {
         System.out.println("----- 2nd -----");
 
         Person fourPerson = new Person("Emma", 29, "journalist");
-        System.out.printf("4) Name %s, age %d work: %s \n", fourPerson.name, fourPerson.age, fourPerson.profession);
+        System.out.printf("Name %s, age %d work: %s \n", fourPerson.name, fourPerson.age, fourPerson.profession);
+        System.out.printf("Name %s, age %d work: %s \n", fourPerson.name, fourPerson.age, Person.changeProfession());
+
     }
 }
