@@ -17,8 +17,6 @@ public class Person {
 
     public void changeProfession() {
         profession = "editor";
-        System.out.println("- After update profession -");
-        System.out.printf("Name: %s, age %d work: %s \n", name, age, profession);
 
     }
 }

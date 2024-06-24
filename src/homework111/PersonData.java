@@ -18,6 +18,8 @@ public class PersonData {
         Person fourPerson = new Person("Emma", 29, "journalist");
         fourPerson.printPersonData();
         fourPerson.changeProfession();
+        System.out.println("- After update profession -");
+        fourPerson.printPersonData();
 
     }
 }
