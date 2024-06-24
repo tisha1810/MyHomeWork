@@ -17,7 +17,7 @@ public class Person {
     }
 
     public void changeProfession(String profession) {
-        System.out.println("- After update profession -");
+        System.out.println("-  After update profession  -");
         this.profession = profession;
 
     }

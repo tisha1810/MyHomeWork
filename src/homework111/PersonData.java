@@ -9,10 +9,14 @@ public class PersonData {
         firstPerson.changeProfession("programmer");
         firstPerson.printPersonData();
 
+        System.out.println("------");
+
         Person secondPerson = new Person("Allison", 32, "doctor");
         secondPerson.printPersonData();
         secondPerson.changeProfession("mathematician");
         secondPerson.printPersonData();
+
+        System.out.println("------");
 
         Person thirdPerson = new Person("Michael", 45, "policeman");
         thirdPerson.printPersonData();
