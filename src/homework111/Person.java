@@ -1,7 +1,5 @@
 package homework111;
 
-import java.util.Scanner;
-
 public class Person {
     String name;
     int age;
@@ -17,16 +15,10 @@ public class Person {
         System.out.printf("Name: %s, age %d work: %s \n", name, age, profession);
     }
 
-    public void printUpdateData() {
-        System.out.printf("Name: %s, age %d work: %s \n", name, age, changeProfession());
-    }
-
-    public String changeProfession() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your new profession:");
-        String newProfession = scanner.nextLine();
+    public void changeProfession() {
+        profession = "editor";
         System.out.println("- After update profession -");
-        return newProfession;
-    }
+        System.out.printf("Name: %s, age %d work: %s \n", name, age, profession);
 
+    }
 }
