@@ -26,6 +26,7 @@ class EmployeeRun {
         Employee employee = new Employee("Tom Jones", "doctor", "doc@email.com",
                 "+1-855-355-45-25", 35);
         employee.printData();
+
     }
 
 }
