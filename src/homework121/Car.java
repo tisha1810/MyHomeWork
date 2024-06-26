@@ -6,9 +6,8 @@ public class Car {
             startCommand();
             starFuelSystem();
             startElectric();
-        } else {
-            stopEngine();
         }
+        stopEngine();
     }
 
     private void startElectric() {
