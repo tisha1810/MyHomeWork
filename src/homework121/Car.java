@@ -1,5 +1,7 @@
 package homework121;
 
+import java.util.Scanner;
+
 public class Car {
     public void start(int fuelLevel) {
         if (fuelLevel > 5) {
@@ -33,6 +35,8 @@ public class Car {
 class CarStart {
     public static void main(String[] args) {
         Car newCar = new Car();
-        newCar.start(6);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Check fuel level");
+        newCar.start(scanner.nextInt());
     }
 }
