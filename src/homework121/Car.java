@@ -6,8 +6,9 @@ public class Car {
             startCommand();
             starFuelSystem();
             startElectric();
+        } else {
+            stopEngine();
         }
-        stopEngine();
     }
 
     private void startElectric() {
@@ -32,6 +33,6 @@ public class Car {
 class CarStart {
     public static void main(String[] args) {
         Car newCar = new Car();
-        newCar.start(4);
+        newCar.start(6);
     }
 }
