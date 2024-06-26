@@ -7,7 +7,7 @@ public class Employee {
     private String phone;
     private int age;
 
-    public Employee(String name, String position, String email, String phone, int age) {
+    Employee(String name, String position, String email, String phone, int age) {
         this.name = name;
         this.position = position;
         this.email = email;
@@ -19,11 +19,13 @@ public class Employee {
         System.out.printf("Name: %s, position: %s, email: %s, phone number: %s, age %d\n", name, position, email,
                 phone, age);
     }
+}
 
+class EmployeeRun {
     public static void main(String[] args) {
-        Employee firstEmployee = new Employee("Tom Jones", "doctor", "ds@email.com",
-                "+1-855-235-45-55", 35);
-        firstEmployee.printData();
+        Employee employee = new Employee("Tom Jones", "doctor", "doc@email.com",
+                "+1-855-355-45-25", 35);
+        employee.printData();
     }
 
 }
