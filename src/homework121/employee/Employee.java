@@ -1,4 +1,4 @@
-package homework121;
+package homework121.employee;
 
 public class Employee {
     private String name;

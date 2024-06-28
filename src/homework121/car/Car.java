@@ -1,4 +1,4 @@
-package homework121;
+package homework121.car;
 
 import java.util.Scanner;
 
