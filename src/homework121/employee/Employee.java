@@ -15,9 +15,9 @@ public class Employee {
         this.age = age;
     }
 
-    public void printData() {
-        System.out.printf("Name: %s, position: %s, email: %s, phone number: %s, age %d\n", name, position, email,
-                phone, age);
+    public String toString() {
+        return "[Name: " + name + ", position: " + position + ", email: " + email + ", phone number: " + phone +
+                " age: " + age + "]";
     }
 }
 
@@ -25,9 +25,11 @@ class EmployeeRun {
     public static void main(String[] args) {
         Employee employee = new Employee("Tom Jones", "doctor", "doc@email.com",
                 "+1-855-355-45-25", 35);
-        employee.printData();
+        System.out.println(employee.toString());
+
 
     }
+
 
 }
 
