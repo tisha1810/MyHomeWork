@@ -33,15 +33,14 @@ public class Algorithm {
     public static void printArray(int[] array) {
         System.out.print("[ ");
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int j : array) {
+            System.out.print(j + " ");
         }
         System.out.println("]");
     }
 
     public static void insertionSort(int[] array) {
-        int n = array.length;
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < array.length; i++) {
             int temp = array[i];
             int j = i - 1;
             while (j >= 0 && array[j] > temp) {

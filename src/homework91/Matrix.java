@@ -42,9 +42,9 @@ public class Matrix {
     }
 
     public static void printMatrix(int[][] array) {
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                System.out.print(array[i][j] + " ");
+        for (int[] ints : array) {
+            for (int anInt : ints) {
+                System.out.print(anInt + " ");
             }
             System.out.println();
         }
@@ -62,15 +62,15 @@ public class Matrix {
 
     public static long productColumns(int[][] array, int initialRow) {
         long product = 1;
-        for (int i = 0; i < array.length; i++) {
+        for (int[] ints : array) {
             for (int j = initialRow; j < array.length; j += 2) {
-                product *= array[i][j];
+                product *= ints[j];
             }
         }
         return product;
     }
 
-    public static boolean magicSquare(int[][] array) {
+    public static boolean isMagicSquare(int[][] array) {
         int inchSum = 0;
         for (int i = 0; i < array.length; i++) {
             inchSum += array[i][i];
@@ -79,5 +79,8 @@ public class Matrix {
 
         return false;
 
+    }
+    public static int sumRow (int maxSize){
+        return 0;
     }
 }

@@ -23,7 +23,7 @@ public class Methods {
         int size = scanner.nextInt();
 
         System.out.println();
-        int[] array = generateArray(value);
+        int[] array = generateArray(size);
         printArray(array);
         System.out.println("Sum of your array: " + arraySum(array));
 
@@ -53,13 +53,11 @@ public class Methods {
     }
 
     public static int valueSquare(int value) {
-        int result = value * value;
-        return result;
+        return value * value;
     }
 
     public static double volume(double radius, double high) {
-        double volume = Math.PI * (radius * radius) * high;
-        return volume;
+        return Math.PI * (radius * radius) * high;
     }
 
     public static int[] generateArray(int size) {
@@ -72,16 +70,16 @@ public class Methods {
 
     public static void printArray(int[] array) {
         System.out.print("[ ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int j : array) {
+            System.out.print(j + " ");
         }
         System.out.println("]");
     }
 
     public static int arraySum(int[] array) {
         int sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum += array[i];
+        for (int j : array) {
+            sum += j;
         }
         return sum;
     }
@@ -92,8 +90,7 @@ public class Methods {
     }
 
     public static int degreeOfValues(int a, int b) {
-        int result = (int) Math.pow(a, b);
-        return result;
+        return (int) Math.pow(a, b);
     }
 
     public static void printLines(String line, int n) {
