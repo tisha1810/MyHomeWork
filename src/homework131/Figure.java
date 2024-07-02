@@ -13,10 +13,10 @@ public class Figure implements Calculable {
                 new Square(4, 4),
                 new Triangle(4, 7)
         };
-        System.out.printf("Sum all squares = %.2f", sumAllSquares(figures));
+        System.out.printf("Sum of all areas = %.2f", sumAllAreas(figures));
     }
 
-    public static double sumAllSquares(Figure[] figures) {
+    public static double sumAllAreas(Figure[] figures) {
         double sum = 0;
         for (Figure figure : figures) {
             sum += figure.calculate();
