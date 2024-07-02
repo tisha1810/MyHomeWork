@@ -1,6 +1,6 @@
 package homework131;
 
-public class Triangle extends Figures implements Calculable {
+public class Triangle extends Figure implements Calculable {
     int base;
     int highest;
 

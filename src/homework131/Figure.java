@@ -1,8 +1,14 @@
 package homework131;
 
-public class Figures implements Calculable {
+public class Figure implements Calculable {
+
+    @Override
+    public double calculate() {
+        return 0;
+    }
+
     public static void main(String[] args) {
-        Figures[] figures = {
+        Figure[] figures = {
                 new Circle(Math.PI, 2),
                 new Square(4, 4),
                 new Triangle(4, 7)
@@ -10,20 +16,11 @@ public class Figures implements Calculable {
         System.out.printf("Sum all squares = %.2f", sumAllSquares(figures));
     }
 
-
-    @Override
-    public double calculate() {
-        return 0;
-    }
-
-    public static double sumAllSquares(Figures[] figures) {
+    public static double sumAllSquares(Figure[] figures) {
         double sum = 0;
-        for (Figures figure : figures) {
+        for (Figure figure : figures) {
             sum += figure.calculate();
-
         }
         return sum;
-
     }
-
 }

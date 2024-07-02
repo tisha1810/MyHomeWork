@@ -1,6 +1,6 @@
 package homework131;
 
-public class Square extends Figures implements Calculable {
+public class Square extends Figure implements Calculable {
   int firstSide;
   int secondSide;
 
