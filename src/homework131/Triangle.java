@@ -1,18 +1,17 @@
 package homework131;
 
-public class Triangle implements Calculable {
-    int base;
-    int highest;
+public class Triangle extends Figures implements Calculable {
+    private final int BASE;
+    private final int HIGHEST;
 
-    public Triangle(int base, int highest) {
-        this.base = base;
-        this.highest = highest;
+    public Triangle(int BASE, int HIGHEST) {
+        this.BASE = BASE;
+        this.HIGHEST = HIGHEST;
     }
 
-
     @Override
-    public double calculateSquare() {
-        return (double) (base * highest) / 2;
+    public double calculate() {
+        return (double) (BASE * HIGHEST) / 2;
 
     }
 }

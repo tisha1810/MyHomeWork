@@ -7,7 +7,7 @@ public class Figures implements Calculable {
                 new Square(4, 4),
                 new Triangle(4, 7)
         };
-        System.out.printf("%.2f", sumAllSquares(figures));
+        System.out.printf("Sum all squares = %.2f", sumAllSquares(figures));
     }
 
 

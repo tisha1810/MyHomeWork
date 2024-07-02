@@ -1,17 +1,16 @@
 package homework131;
 
-public class Circle implements Calculable {
-    double pi;
-    int radius;
+public class Circle extends Figures implements Calculable {
+    private final double PI;
+    private final int RADIUS;
 
-    public Circle(double pi, int radius) {
-        this.pi = Math.PI;
-        this.radius = radius;
-
+    public Circle(double PI, int RADIUS){
+        this.PI = PI;
+        this.RADIUS = RADIUS;
     }
 
     @Override
-    public double calculateSquare() {
-        return pi * (radius * radius);
+    public double calculate() {
+        return PI * (RADIUS * RADIUS);
     }
 }
