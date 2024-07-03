@@ -1,8 +1,8 @@
 package homework131;
 
-public class Square extends Figure {
+public class Square implements CalculableFigure {
     private int side;
-    double area;
+    private double area;
 
     public Square(int side) {
         this.side = side;
