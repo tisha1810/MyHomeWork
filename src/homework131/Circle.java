@@ -1,6 +1,6 @@
 package homework131;
 
-public class Circle extends Figure {
+public class Circle implements CalculableFigure {
     private final double PI;
     private int radius;
     private double area;
