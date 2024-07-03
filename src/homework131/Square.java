@@ -1,16 +1,16 @@
 package homework131;
 
-public class Square extends Figure implements Calculable {
-  int firstSide;
-  int secondSide;
+public class Square extends Figure {
+    private int side;
+    double area;
 
-    public Square(int firstSide, int secondSide){
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
+    public Square(int side) {
+        this.side = side;
+        area = calculateArea();
     }
 
     @Override
-    public double calculate() {
-        return firstSide * secondSide;
+    public double calculateArea() {
+        return side * side;
     }
 }
