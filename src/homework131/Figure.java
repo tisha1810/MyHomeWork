@@ -1,25 +1,19 @@
 package homework131;
 
-public class Figure implements Calculable {
+public abstract class Figure implements CalculableFigure {
+}
 
-    @Override
-    public double calculate() {
-        return 0;
-    }
-
+class FigureDemo {
     public static void main(String[] args) {
-        Figure[] figures = {
-                new Circle(Math.PI, 2),
-                new Square(4, 4),
-                new Triangle(4, 7)
-        };
-        System.out.printf("Sum of all areas = %.2f", sumAllAreas(figures));
+        Figure[] figures = {new Square(7), new Circle(5), new Triangle(6, 7)};
+        System.out.printf("Sum of all areas = %.2f", calculateAllAreas(figures));
     }
 
-    public static double sumAllAreas(Figure[] figures) {
+
+    public static double calculateAllAreas(Figure[] figures) {
         double sum = 0;
         for (Figure figure : figures) {
-            sum += figure.calculate();
+            sum += figure.calculateArea();
         }
         return sum;
     }
