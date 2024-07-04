@@ -17,7 +17,6 @@ public class Store {
         System.out.print("Adress: " + adress);
         System.out.println(" " + streetNumber);
 
-
         clientName = "Boris Jonson";
         product = "Playstation";
         adress = "Baker st.";
