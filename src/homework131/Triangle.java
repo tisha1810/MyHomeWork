@@ -3,12 +3,10 @@ package homework131;
 public class Triangle implements CalculableFigure {
     private int base;
     private int highest;
-    private double area;
 
     public Triangle(int base, int highest) {
         this.base = base;
         this.highest = highest;
-        area = calculateArea();
     }
 
     @Override
