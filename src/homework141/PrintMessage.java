@@ -2,24 +2,26 @@ package homework141;
 
 public class PrintMessage implements Printer {
 
-    @Override
-    public void print() {
+    private final Message message;
+
+    public PrintMessage(Message message) {
+        this.message = message;
     }
 
-    public static class Message implements Printer {
-        @Override
-        public void print() {
-            if (sender.isEmpty() & text.isEmpty()) {
-                System.out.println("Unknown send empty message.");
-            } else if (sender.isEmpty()) {
-                System.out.println("Unknown user send message: " + "'" + text + "'");
-            } else if (text.isEmpty()) {
-                System.out.println("User: " + sender + " send empty message");
-            } else {
-                System.out.println("User: " + sender + ", send message: " + "'" + text + "'");
-            }
+    @Override
+    public void print() {
+        if (message.getSender().isEmpty() & message.getText().isEmpty()) {
+            System.out.println("Unknown user, send empty message");
+        } else if (message.getText().isEmpty()) {
+            System.out.println("User: " + message.getSender() + ", send empty message");
+        } else if (message.getSender().isEmpty()) {
+            System.out.printf("Unknown user send message: < %s >", message.getText());
+        } else {
+            System.out.printf("User: %s, send message: < %s >", message.getSender(), message.getText());
         }
+    }
 
+    public static class Message {
         private String sender;
         private String text;
 
@@ -46,7 +48,7 @@ public class PrintMessage implements Printer {
     }
 
     public static void main(String[] args) {
-        Printer message = new Message("Boris", "hello");
+        PrintMessage message = new PrintMessage(new Message("Boris", "Hello, i am Boris"));
         message.print();
     }
 }
