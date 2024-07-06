@@ -46,7 +46,7 @@ public class PrintMessage implements Printer {
     }
 
     public static void main(String[] args) {
-        PrintMessage.Message message = new Message("Boris", "hello");
+        Printer message = new Message("Boris", "hello");
         message.print();
     }
 }
