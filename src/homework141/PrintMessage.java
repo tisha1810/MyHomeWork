@@ -10,9 +10,7 @@ public class PrintMessage implements Printer {
 
     @Override
     public void print() {
-        if (message.getSender().isEmpty() & message.getText().isEmpty()) {
-            System.out.println("Unknown user, send empty message");
-        } else if (message.getText().isEmpty()) {
+        if (message.getText().isEmpty()) {
             System.out.println("User: " + message.getSender() + ", send empty message");
         } else if (message.getSender().isEmpty()) {
             System.out.printf("Unknown user send message: < %s >", message.getText());
@@ -50,9 +48,22 @@ public class PrintMessage implements Printer {
     public static void main(String[] args) {
         Message message = new Message("", "");
         message.setSender("Boris");
-        message.setText("hello i am Boris");
+        message.setText("hello, i am Boris");
         PrintMessage printMessage = new PrintMessage(message);
-        printMessage.print();
+
+        Printer emptyMessage = new Printer() {
+            @Override
+            public void print() {
+                if (message.getSender().isEmpty() & message.getText().isEmpty()) {
+                    System.out.println("Processing empty message, from unknown user...");
+                }
+            }
+        };
+        if (message.getSender().isEmpty() & message.getText().isEmpty()) {
+            emptyMessage.print();
+        } else {
+            printMessage.print();
+        }
     }
 }
 
