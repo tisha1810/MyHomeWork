@@ -1,5 +1,5 @@
 package homework141;
 
-public interface Print {
+public interface Printer {
     void print();
 }
