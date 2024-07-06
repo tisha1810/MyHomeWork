@@ -48,8 +48,11 @@ public class PrintMessage implements Printer {
     }
 
     public static void main(String[] args) {
-        PrintMessage message = new PrintMessage(new Message("Boris", "Hello, i am Boris"));
-        message.print();
+        Message message = new Message("", "");
+        message.setSender("Boris");
+        message.setText("hello i am Boris");
+        PrintMessage printMessage = new PrintMessage(message);
+        printMessage.print();
     }
 }
 
