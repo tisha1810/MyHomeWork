@@ -11,11 +11,11 @@ public class PrintMessage implements Printer {
     @Override
     public void print() {
         if (message.getText().isEmpty()) {
-            System.out.println("User: " + message.getSender() + ", send empty message");
+            System.out.printf("User: '%s', send empty message", message.getSender());
         } else if (message.getSender().isEmpty()) {
             System.out.printf("Unknown user send message: < %s >", message.getText());
         } else {
-            System.out.printf("User: %s, send message: < %s >", message.getSender(), message.getText());
+            System.out.printf("User: '%s', send message: < %s >", message.getSender(), message.getText());
         }
     }
 
