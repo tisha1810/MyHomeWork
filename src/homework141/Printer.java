@@ -1,5 +1,5 @@
 package homework141;
 
 public interface Printer {
-    void print();
+    void print(MessagePrinter.Message message);
 }
