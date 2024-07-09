@@ -27,6 +27,7 @@ public class MessagePrinter implements Printer {
                     System.out.println("Processing empty message from unknown user...");
                 }
             };
+            printer.print(message);
         }
     }
 
