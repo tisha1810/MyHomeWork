@@ -1,12 +1,10 @@
 package homework141;
 
 public class MessagePrinter implements Printer {
-    private Message message;
     private static String sender;
     private static String text;
 
     public MessagePrinter(Message message) {
-        this.message = message;
         sender = message.sender;
         text = message.text;
     }
@@ -22,14 +20,13 @@ public class MessagePrinter implements Printer {
         } else {
             System.out.printf("User: '%s', send message: < %s >", sender, text);
         }
-        Printer printer = new Printer() {
-            @Override
-            public void print(Message message) {
-                System.out.println("Processing empty message from unknown user...");
-            }
-        };
         if (sender == null & text == null) {
-            printer.print(message);
+            Printer printer = new Printer() {
+                @Override
+                public void print(Message message) {
+                    System.out.println("Processing empty message from unknown user...");
+                }
+            };
         }
     }
 
