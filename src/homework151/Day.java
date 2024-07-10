@@ -1,7 +1,13 @@
 package homework151;
 
 public enum Day implements DayAdvice {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY;
 
     @Override
     public void advice(Day day) {
