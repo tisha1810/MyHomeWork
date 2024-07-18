@@ -17,24 +17,30 @@ public class Matrix {
 
             printMatrix(matrix);
 
+            System.out.println("------");
             int initialRow = 0;
             System.out.println("Sum of even rows " + sumRows(matrix, initialRow));
 
+            System.out.println("------");
             initialRow = 1;
             System.out.println("Sum of odd rows " + sumRows(matrix, initialRow));
 
+            System.out.println("------");
             initialRow = 0;
             System.out.println("Product of even columns " + productColumns(matrix, initialRow));
 
+            System.out.println("------");
             initialRow = 1;
             System.out.println("Product of odd columns " + productColumns(matrix, initialRow));
         }
         boolean checkMagicSquare = isMagicSquare(matrix);
-        if (!checkMagicSquare){
+        System.out.println("------");
+        if (!checkMagicSquare) {
             System.out.println("Is not magic square.");
         } else {
             System.out.println("Bingo it's magic square!!!");
         }
+        System.out.println("-- The End --");
     }
 
     public static int[][] generateMatrix(int maxSize) {
