@@ -29,6 +29,12 @@ public class Matrix {
             initialRow = 1;
             System.out.println("Product of odd columns " + productColumns(matrix, initialRow));
         }
+        boolean checkMagicSquare = isMagicSquare(matrix);
+        if (!checkMagicSquare){
+            System.out.println("Is not magic square.");
+        } else {
+            System.out.println("Bingo it's magic square!!!");
+        }
     }
 
     public static int[][] generateMatrix(int maxSize) {
@@ -71,16 +77,42 @@ public class Matrix {
     }
 
     public static boolean isMagicSquare(int[][] array) {
-        int inchSum = 0;
-        for (int i = 0; i < array.length; i++) {
-            inchSum += array[i][i];
-
+        int magicSum = 0;
+        for (int j = 0; j < array.length; j++) {
+            magicSum += array[0][j];
         }
-
-        return false;
-
-    }
-    public static int sumRow (int maxSize){
-        return 0;
+        for (int i = 1; i < array.length; i++) {
+            int rowSum = 0;
+            for (int j = 0; j < array.length; j++) {
+                rowSum += array[i][j];
+            }
+            if (rowSum != magicSum) {
+                return false;
+            }
+        }
+        for (int j = 0; j < array.length; j++) {
+            int colSum = 0;
+            for (int i = 0; i < array.length; i++) {
+                colSum += array[i][j];
+            }
+            if (colSum != magicSum) {
+                return false;
+            }
+            int mainDiagonalSum = 0;
+            for (int i = 0; i < array.length; i++) {
+                mainDiagonalSum += array[i][i];
+            }
+            if (mainDiagonalSum != magicSum) {
+                return false;
+            }
+            int secDiagonalSum = 0;
+            for (int i = 0; i < array.length; i++) {
+                secDiagonalSum += array[i][array.length - 1 - i];
+            }
+            if (secDiagonalSum != magicSum) {
+                return false;
+            }
+        }
+        return true;
     }
 }
