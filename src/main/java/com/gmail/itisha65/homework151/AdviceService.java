@@ -5,16 +5,7 @@ public class AdviceService implements DayAdvice {
     @Override
     public void advice(Day day) {
         switch (day) {
-            case MONDAY:
-                System.out.println("To be productive in job!");
-                break;
-            case TUESDAY:
-                System.out.println("To be productive in job!");
-                break;
-            case WEDNESDAY:
-                System.out.println("To be productive in job!");
-                break;
-            case THURSDAY:
+            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY:
                 System.out.println("To be productive in job!");
                 break;
             case FRIDAY:
