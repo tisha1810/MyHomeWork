@@ -98,8 +98,8 @@ public class Matrix {
         }
         for (int j = 0; j < array.length; j++) {
             int colSum = 0;
-            for (int i = 0; i < array.length; i++) {
-                colSum += array[i][j];
+            for (int[] ints : array) {
+                colSum += ints[j];
             }
             if (colSum != magicSum) {
                 return false;
