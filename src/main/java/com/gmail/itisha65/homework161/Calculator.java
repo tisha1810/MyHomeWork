@@ -16,8 +16,7 @@ public class Calculator {
 
     public double dividing(double a, double b) {
         if (b == 0) {
-            throw new
-                    ArithmeticException("Invalid operation");
+            throw new ArithmeticException("Invalid operation");
         }
         return a / b;
     }
