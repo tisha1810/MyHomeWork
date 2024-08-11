@@ -8,7 +8,7 @@ public class Algorithm {
 
         int[] numbers = new int[10];
 
-        System.out.println("----Usorted array----");
+        System.out.println("----Unsorted array----");
         generateArray(numbers);
         printArray(numbers);
 
