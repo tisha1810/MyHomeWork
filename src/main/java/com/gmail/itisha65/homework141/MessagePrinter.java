@@ -11,14 +11,25 @@ public class MessagePrinter implements Printer {
 
     @Override
     public void print(Message message) {
-        if (sender.isEmpty() & text.isEmpty()) {
-            System.out.println("Processing empty message from unknown user...");
-        } else if (text.isEmpty()) {
-            System.out.printf("User: '%s', send empty message!", sender);
-        } else if (sender.isEmpty()) {
-            System.out.printf("Unknown user send message: < %s >", text);
+        if (sender == null & text == null) {
+            Printer printer = new Printer() {
+                @Override
+                public void print(Message message) {
+                    System.out.println("Processing empty message from unknown user...");
+                }
+            };
         } else {
-            System.out.printf("User: '%s', send message: < %s >", sender, text);
+            assert sender != null;
+            assert text != null;
+            if (sender.isBlank() & text.isBlank()) {
+                System.out.println("Processing empty message from unknown user...");
+            } else if (text.isBlank()) {
+                System.out.printf("User: '%s', send empty message!", sender);
+            } else if (sender.isBlank()) {
+                System.out.printf("Unknown user send message: < %s >", text);
+            } else {
+                System.out.printf("User: '%s', send message: <%s>", sender, text);
+            }
         }
         if (sender == null & text == null) {
             Printer printer = new Printer() {
@@ -32,8 +43,8 @@ public class MessagePrinter implements Printer {
     }
 
     public static class Message {
-        private String sender;
-        private String text;
+        private final String sender;
+        private final String text;
 
         public Message(String sender, String text) {
             this.sender = sender;
@@ -42,7 +53,7 @@ public class MessagePrinter implements Printer {
     }
 
     public static void main(String[] args) {
-        Message message = new Message("Boris", "hello, i am Boris!");
+        Message message = new Message("Boris", "    ");
         MessagePrinter messagePrinter = new MessagePrinter(message);
         messagePrinter.print(message);
     }
