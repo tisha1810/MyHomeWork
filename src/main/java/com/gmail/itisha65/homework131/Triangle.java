@@ -1,8 +1,8 @@
 package com.gmail.itisha65.homework131;
 
 public class Triangle implements CalculableFigure {
-    private int base;
-    private int highest;
+    private final int base;
+    private final int highest;
 
     public Triangle(int base, int highest) {
         this.base = base;

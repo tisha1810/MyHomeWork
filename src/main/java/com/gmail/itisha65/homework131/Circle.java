@@ -1,7 +1,7 @@
 package com.gmail.itisha65.homework131;
 
 public class Circle implements CalculableFigure {
-    private int radius;
+    private final int radius;
 
     public Circle(int radius) {
         this.radius = radius;

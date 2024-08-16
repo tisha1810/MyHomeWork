@@ -1,7 +1,7 @@
 package com.gmail.itisha65.homework131;
 
 public class Square implements CalculableFigure {
-    private int side;
+    private final int side;
 
     public Square(int side) {
         this.side = side;
